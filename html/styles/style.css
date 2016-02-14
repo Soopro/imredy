@@ -1,0 +1,69 @@
+/*
+-----------------------------------------------
+Author:   redy
+Date:     14 Feb 2016
+Version:  1.0
+----------------------------------------------- */
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  font-family: RobotoDraft, Roboto,'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.cover {
+  position: absolute;
+  min-height: 320px;
+  height: 100%;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+.cover .wrapper {
+  position: relative;
+  width: 100%;
+  top: 45%;
+  height: 256px;
+  margin-top: -128px;
+}
+
+.cover .link,
+.cover .link:link,
+.cover .link:visited {
+  display: block;
+  width: 256px;
+  padding: 54px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 10px solid transparent;
+}
+
+.cover .link:hover {
+  border: 10px solid #c33;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  color: #ccc;
+}
+
+
+
+/* Languages
+/* ----------------------------------------------- */
+html[lang^="zh"],
+html[lang^="zh"] body {
+  font-family: RobotoDraft, Roboto,
+               'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 
+               'Helvetica Neue', sans-serif;
+}
