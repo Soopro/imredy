@@ -43,6 +43,18 @@ a:visited {
   color: #c33;
 }
 
+figure a {
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+figure a:hover {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
+              0 6px 10px 0 rgba(0,0,0,.14),
+              0 1px 18px 0 rgba(0,0,0,.12);
+}
+
 .ln {
   display: inline-block;
   line-height: 1.5em;
