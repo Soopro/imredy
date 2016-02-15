@@ -125,6 +125,16 @@ a:visited {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.paginator:before,
+.paginator:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.paginator > div {
+  width: 50%;
+  float: left;
+}
 
 .cr,
 .cr p {
@@ -139,8 +149,8 @@ a:visited {
 #primary-nav {
   position: absolute;
   width: 196px;
+  max-width: 196px;
   min-height: 100%;
-  max-width: 240px;
   padding: 30px;
 }
 #primary-nav .logo {
@@ -193,6 +203,7 @@ a:visited {
   #primary-nav {
     position: relative;
     padding: 15px;
+    min-height: inherit;
   }
   #primary-nav .logo {
     display: none;
@@ -203,6 +214,7 @@ a:visited {
     width: 100%;
     left: 15px;
     margin: 0;
+    z-index: 9999;
     background: #fff;
     padding: 8px 15px;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
@@ -227,11 +239,13 @@ a:visited {
   min-height: 100%;
   padding: 30px;
   text-align: right;
+  z-index: 999;
 }
 
 @media (max-width: 767px){
   #sider {
     padding: 15px;
+    min-height: 64px;
   }
 }
 
@@ -278,25 +292,15 @@ a:visited {
   }
 }
 
-.entries .entry{
+.entries .entry {
   margin-bottom: 30px;
 }
 
-.entries .entry figure {
-  margin-top: 15px;
-}
-.entries .entry figure > img{
-  width: 128px;
-  height: auto;
+.entries figure {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-@media (max-width: 479px){
-  .entries .entry figure > img{
-    width: 100%;
-    height: auto;
-  }
-}
-  
 
 /* Cover
 ----------------------------------------------- */
