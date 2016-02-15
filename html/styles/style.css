@@ -30,11 +30,9 @@ h3 {
   color: #c33;
   font-weight: 300;
 }
-p {
-  max-width: 640px;
-}
-figure img {
-  max-width: 100%;
+
+.upper {
+  text-transform: uppercase;
 }
 
 a,
@@ -44,15 +42,17 @@ a:visited {
 }
 
 figure a {
-  display: block;
+  display: inline-block;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-
 figure a:hover {
   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
               0 6px 10px 0 rgba(0,0,0,.14),
               0 1px 18px 0 rgba(0,0,0,.12);
+}
+figure img {
+  max-width: 100%;
 }
 
 .ln {
@@ -296,6 +296,7 @@ figure a:hover {
   max-width: 100%;
 }
 
+
 .entries {
   border-top: 10px solid #c33;
 }
@@ -303,7 +304,6 @@ figure a:hover {
   padding-top: 64px;
   padding-bottom: 24px;
 }
-
 @media (max-width: 767px){
   .entries {
     border: 0;
@@ -313,16 +313,34 @@ figure a:hover {
     padding-bottom: 16px;
   }
 }
-
 .entries .entry {
   margin-bottom: 30px;
 }
-
+.entries .entry h1,
+.entries .entry h2,
+.entries .entry h3,
+.entries .entry p {
+ max-width: 768px;
+}
 .entries figure {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
+
+.paper {
+  border-top: 10px solid #c33;
+  padding-top: 20px;
+}
+.paper .banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.paper .date {
+  font-size: 20px;
+  font-weight: 300;
+}
 
 /* Cover
 ----------------------------------------------- */
