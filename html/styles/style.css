@@ -41,19 +41,23 @@ a:visited {
   color: #c33;
 }
 
+
+figure img {
+  max-width: 100%;
+}
 figure a {
+  max-width: 100%;
   display: inline-block;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-figure a:hover {
+figure a:hover{
   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
               0 6px 10px 0 rgba(0,0,0,.14),
               0 1px 18px 0 rgba(0,0,0,.12);
 }
-figure img {
-  max-width: 100%;
-}
+
+
 
 .ln {
   display: inline-block;
@@ -326,7 +330,6 @@ figure img {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 
 .paper {
   border-top: 10px solid #c33;
