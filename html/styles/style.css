@@ -15,6 +15,65 @@ body {
   font-family: RobotoDraft, Roboto,'Helvetica Neue', Helvetica, sans-serif;
 }
 
+body,p,h1,h2,h3,h4,h5,h6,div,span,td,th,code,pre{
+  color: #111;
+}
+
+body {
+  background: #fff url('bg.jpg') no-repeat right top;
+}
+
+#primary-nav {
+  float: left;
+  width: 270px;
+  max-width: 270px;
+  padding: 30px;
+}
+#primary-nav .logo {
+  display: block;
+  max-width: 64px;
+}
+#primary-nav .logo img {
+  max-width: 100%;
+}
+#primary-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+}
+#primary-nav ul li{
+  margin-top: 15px;
+}
+
+#primary-nav a,
+#primary-nav a:link,
+#primary-nav a:visited {
+  color: #111;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+#primary-nav a.current,
+#primary-nav a:hover {
+  color: #c33;
+}
+
+#primary-aside {
+  float: left;
+  width: 200px;
+  max-width: 200px;
+}
+
+.cr,
+.cr p {
+  color: #ccc;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+/* Cover
+----------------------------------------------- */
 .cover {
   position: absolute;
   min-height: 320px;
@@ -23,6 +82,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   text-align: center;
+  background: #fff;
 }
 .cover .wrapper {
   position: relative;
@@ -32,9 +92,9 @@ body {
   margin-top: -128px;
 }
 
-.cover .link,
-.cover .link:link,
-.cover .link:visited {
+.cover .entrance,
+.cover .entrance:link,
+.cover .entrance:visited {
   display: block;
   width: 256px;
   padding: 54px;
@@ -43,18 +103,17 @@ body {
   border: 10px solid transparent;
 }
 
-.cover .link:hover {
+.cover .entrance:hover {
   border: 10px solid #c33;
 }
 
-.copyright {
+.cover .cr {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 48px;
   text-align: center;
-  color: #ccc;
 }
 
 
