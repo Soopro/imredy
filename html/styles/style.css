@@ -249,14 +249,24 @@ a:visited {
   }
 }
 
-/*#sider .channel {
-  margin-top: 100px;
+#sider .channel {
+  display: none;
+  position: absolute;
+  width: 100%;
+  right: 15px;
+  margin: 0;
+  z-index: 9999;
+  background: #fff;
+  padding: 8px 15px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
+              0 6px 10px 0 rgba(0,0,0,.14),
+              0 1px 18px 0 rgba(0,0,0,.12);
 }
 
 #sider .channel a{
   margin-top: 5px;
   margin-bottom: 5px;
-}*/
+}
 
 .wrapper {
   margin-left: 196px;
