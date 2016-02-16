@@ -8,7 +8,8 @@
     {% for item in menu.primary %}
     <li>
       <a href="{{item.url}}"
-         class="{{'active' if item.url|path == meta.url|path else ''}}">
+         class="{{'active' if item.url|path == meta.url|path 
+                  or item.alias == meta.type }}">
         {{item.title}}
       </a>
     </li>

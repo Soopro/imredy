@@ -12,13 +12,15 @@
       <header>
         <h1>{{meta.title}}</h1>
       </header>
-      {% for post in pages | type('post') %}
+      {% set booklet = stapler(pages|type('post'), g.paged, g.perpage) %}
+      {% set posts = booklet.pages %}
+      {% for post in posts %}
       <!-- entry -->
       <div class="row entry">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="{{post.url}}">
             <img class="img-responsive" alt="{{post.title}}" 
-                 src="{{post.featured_img.src}}" />
+                 src="{{post.featured_img.src|thumbnail}}" />
           </a>
         </figure>
         <div class="col-lg-10 col-md-9 col-sm-8">
@@ -34,31 +36,32 @@
       <!-- #entry -->
       {% endfor %}
       <!-- paginator -->
+      {% if booklet.max and booklet.paged %}
       <div class="paginator clearfix">
+      	{% set has_prev_page = booklet.paged < booklet.max %}
+      	{% set has_next_page = booklet.paged > 1 %}
         <div class="text-left">
-          <div class="ln prev">
-            <a href="#">{{_('Previous')}}</a>
+          <div class="ln next {{'disabled' if not has_next_page}}">
+            <a href="{{glue({'paged':booklet.paged-1})}}">
+              {{_('Forward')}}
+            </a>
           </div>
         </div>
         <div class="text-right">
-          <div class="ln next">
-            <a href="#">{{_('Forward')}}</a>
+          <div class="ln prev {{'disabled' if not has_prev_page}}">
+            <a href="{{glue({'paged':booklet.paged+1})}}">
+              {{_('Previous')}}
+            </a>
           </div>
         </div>
       </div>
+      {% endif %}
       <!-- #paginator -->
       <hr class="row">
     </div>
-    <div class="container cr">
-      <p>
-        <span>{{site_meta.copyright}}</span>
-        <span>{{site_meta.license}}</span>
-      </p>
-    </div>
+    {% include '_cr_.html' %}
   </section>
-  <aside id="sider">
-    <a href="#" class="icon-btn share"></a>
-  </aside>
+  {% include '_sider_.html' %}
   {% include '_js_.html' %}
 </body>
 </html>
