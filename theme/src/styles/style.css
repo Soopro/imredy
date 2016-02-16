@@ -383,6 +383,7 @@ figure a:hover{
   margin-right: auto;
   margin-left: auto;
   border: 10px solid transparent;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2em;
