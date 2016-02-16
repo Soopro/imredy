@@ -155,7 +155,8 @@ figure a:hover{
 }
 
 .cr,
-.cr p {
+.cr p
+.cr p span {
   color: #ccc;
   font-weight: 200;
   font-size: 12px;
@@ -382,10 +383,16 @@ figure a:hover{
   margin-right: auto;
   margin-left: auto;
   border: 10px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 600;
 }
-
 .cover .entrance:hover {
   border: 10px solid #c33;
+}
+.cover .entrance img {
+  max-width: 100%;
 }
 
 .cover .cr {

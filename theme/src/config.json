@@ -42,6 +42,8 @@
     "post":{"title": "Posts"}
   },
 
+  "hide_properties": ["taxonomy", "tags", "parent"],
+
   "mode": 1,
 
 	"options":{
