@@ -1,0 +1,55 @@
+{
+  "version":"1.0.0",
+  "alias":"tinforce",
+	"title":{
+	  "en":"I'm Redy Theme",
+    "zh":"I'm Redy 主题"
+	},
+  "author":"Redy Ru",
+	"thumbnail":"thumbnail.png",
+  "capability":["ws"],
+	"previews":["previews.jpg"],
+	"description": {
+	  "en": "A simple presonal profolio website.",
+    "zh": "这是一个简单的个人作品集网站。"
+	},
+
+  "templates":{
+    "index":{
+      "en": "Journal Home",
+      "zh": "日志首页"
+    },
+    "cover":{
+      "en": "Cover",
+      "zh": "封面"
+    },
+    "page":{
+      "en": "Static Page",
+      "zh": "静态页面"
+    },
+    "post":{
+      "en": "Post",
+      "zh": "文章页"
+    },
+    "works":{
+      "en": "Works",
+      "zh": "作品页"
+    },
+    "error_404": "404"
+  },
+
+  "content_types":{
+    "post":{"title": "Posts"}
+  },
+
+  "mode": 1,
+
+	"options":{
+		"sortby":"date",
+		"excerpt_length":162,
+		"excerpt_ellipsis":"&hellip;",
+		"date_format": "%Y.%m.%d",
+		"perpage":12,
+    "markdown":false
+  }
+}
