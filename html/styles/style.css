@@ -58,6 +58,11 @@ figure a:hover{
 }
 
 
+*:focus {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
+
 .ln {
   display: inline-block;
   line-height: 1.5em;
