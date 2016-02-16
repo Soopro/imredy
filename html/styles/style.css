@@ -58,7 +58,6 @@ figure a:hover{
 }
 
 
-
 .ln {
   display: inline-block;
   line-height: 1.5em;
@@ -67,8 +66,6 @@ figure a:hover{
   font-size: 16px;
   vertical-align: middle;
 }
-
-
 .ln:before,
 .ln:after {
   color: #aaa;
@@ -86,7 +83,6 @@ figure a:hover{
 .ln.prev:before {
   content:'\2039';
 }
-
 .ln:hover:before{
   color: #c33;
   padding-right: 5px;
@@ -95,6 +91,7 @@ figure a:hover{
   color: #c33;
   padding-left: 5px;
 }
+
 
 .icon-btn {
   display: block;
@@ -343,6 +340,10 @@ figure a:hover{
 .paper .date {
   font-size: 20px;
   font-weight: 300;
+}
+.paper figure {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* Cover
