@@ -358,6 +358,25 @@ figure a:hover{
   padding-bottom: 15px;
 }
 
+/* Modal
+----------------------------------------------- */
+.modal-block {
+  background: #FFF;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.modal-hide {
+  display: none!important;
+}
+
+.social-item img {
+  max-width: 100%;
+}
+
 /* Cover
 ----------------------------------------------- */
 .cover {
