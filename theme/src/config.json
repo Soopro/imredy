@@ -1,6 +1,6 @@
 {
   "version":"1.0.0",
-  "alias":"tinforce",
+  "alias":"im-redy",
 	"title":{
 	  "en":"I'm Redy Theme",
     "zh":"I'm Redy 主题"
@@ -45,7 +45,7 @@
   "hide_properties": ["taxonomy", "tags", "parent"],
 
   "mode": 1,
-
+  
 	"options":{
 		"sortby":"date",
 		"excerpt_length":162,

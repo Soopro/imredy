@@ -21,7 +21,10 @@ body,p,h1,h2,h3,h4,h5,h6,div,span,td,th,code,pre{
 }
 
 body {
-  background: #fff url('bg.jpg') no-repeat right top;
+  background: #fff;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-image: url('bg.jpg');
 }
 
 h1,
