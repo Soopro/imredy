@@ -2,13 +2,13 @@
   "version":"1.0.0",
   "alias":"im-redy",
 	"title":{
-	  "en":"I'm Redy Theme",
-    "zh":"I'm Redy 主题"
+	  "en":"I'm Redy",
+    "zh":"I'm Redy"
 	},
   "author":"Redy Ru",
 	"thumbnail":"thumbnail.png",
   "capability":["ws"],
-	"previews":["previews.jpg"],
+	"previews":["preview1.jpg","preview2.jpg"],
 	"description": {
 	  "en": "A simple presonal profolio website.",
     "zh": "这是一个简单的个人作品集网站。"
@@ -31,7 +31,7 @@
       "en": "Post",
       "zh": "文章页"
     },
-    "works":{
+    "portfolio":{
       "en": "Works",
       "zh": "作品页"
     },
@@ -50,7 +50,7 @@
 		"sortby":"date",
 		"excerpt_length":162,
 		"excerpt_ellipsis":"&hellip;",
-		"date_format": "%Y.%m.%d",
+		"date_format":"%Y.%m.%d",
 		"perpage":6,
     "markdown":false
   }
