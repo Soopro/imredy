@@ -13,15 +13,10 @@
       <img src="{{meta.featured_img.src}}" 
            alt="{{meta.featured_img.title}}" />
       {% else %}
-      {{meta.entrance.title}}
+      <span>{{meta.entrance.title or site_meta.title}}</span>
       {% endif %}
     </a>
   </div>
-  <div class="cr">
-    <p>
-      <span>{{site_meta.copyright}}</span>
-      <span>{{site_meta.license}}</span>
-    </p>
-  </div>
+  {% include '_cr_.html' %}
 </body>
 </html>

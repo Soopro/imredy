@@ -5,7 +5,7 @@
 {% include '_head_.html' %}
 </head>
 
-<body>
+<body style="{{site_meta.bg.style or meta.background.style}}">
   {% include '_nav_.html' %}
   <section class="wrapper">
     <div class="container entries">
@@ -16,10 +16,10 @@
       <div class="row">
         {% for works in meta.attachments %}
         <figure class="col-lg-3 col-md-4 col-sm-6">
-          <a href="{{works.src | thumbnail}}" 
+          <a href="{{works.src}}" 
              class="img-popup {{works.class}}">
             <img class="img-responsive" 
-                 src="{{works.src}}" alt="{{works.title}}" />
+                 src="{{works.src|thumbnail}}" alt="{{works.title}}" />
           </a>
         </figure>
         {% endfor %}
