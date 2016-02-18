@@ -1,5 +1,5 @@
 {% import "g.tpl" as g with context %}
-<div style="{{meta.background.style || site_meta.bg.style}}">
+<div style="{{site_meta.bg.style || meta.background.style}}">
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
@@ -9,13 +9,13 @@
       </figure>
       <header class="upper">
         <h1>
-          <span default="{{_('Title')}}" 
+          <span default="{{_('Error 404')}}" 
                 sup-editor-meta ng-model="meta.title"></span>
         </h1>
       </header>
       <hr class="row">
       <!-- content -->
-      <div class="content" default="{{_('$_CONTENT')}}"
+      <div class="content" default="{{_('$_ERROR404')}}"
            sup-angular-wysiwyg ng-model="content">
       </div>
       <!-- #content -->

@@ -16,12 +16,12 @@
 
   "templates":{
     "index":{
-      "en": "Journal Home",
-      "zh": "日志首页"
-    },
-    "cover":{
       "en": "Cover",
       "zh": "封面"
+    },
+    "journal":{
+      "en": "Journal",
+      "zh": "日志首页"
     },
     "page":{
       "en": "Static Page",
@@ -32,7 +32,7 @@
       "zh": "文章页"
     },
     "portfolio":{
-      "en": "Works",
+      "en": "Portfolio",
       "zh": "作品页"
     },
     "error_404": "404"

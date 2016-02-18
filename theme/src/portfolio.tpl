@@ -1,5 +1,5 @@
 {% import "g.tpl" as g with context %}
-<div style="{{site_meta.bg.style or meta.background.style}}">
+<div style="{{meta.background.style || site_meta.bg.style}}">
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <div class="container entries">
