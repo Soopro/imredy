@@ -1,11 +1,14 @@
 {% import "g.tpl" as g with context %}
-<div style="{{meta.background.style || site_meta.bg.style}}">
+<div class="body" style="{{meta.background.style || site_meta.bg.style}}">
+  <div class="bg-widget">
+    <div sup-editor-widget-bg ng-model="meta.background"></div>
+  </div>
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
       <figure class="row" ng-if="meta.featured_img.src">
-        <img class="img-responsive"
-             ng-src="{{meta.featured_img.src}}" alt="{{meta.title}}">
+        <img class="img-responsive" alt="{{meta.title}}"
+             ng-src="{{meta.featured_img.src}}">
       </figure>
       <header class="upper">
         <h1>
@@ -23,22 +26,24 @@
       </div>
       <!-- #content -->
       <!-- entries -->
-      <div class="row" sup-editor-widget-gallery ng-model="meta.attachments">
-        <figure ng-repeat="pic in meta.attachments"
-                class="col-md-2 col-xs-3">
-          <a href="#" class="img-popup">
-            <img class="img-responsive" 
-                 ng-src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
-          </a>
-        </figure>
-        <figure ng-if="!meta.attachments || meta.attachments.length == 0"
-                class="col-md-2 col-xs-3">
-          <a href="#" class="img-popup">
-            <img class="img-responsive" 
-                 ng-src="{{g.default_thumbnail}}" alt="..." />
-          </a>
-        </figure>
+      <div class="row">
+        <div ng-if="!meta.attachments || meta.attachments.length == 0"
+             class="gallery-widget">
+          <div sup-editor-widget-gallery ng-model="meta.attachments"></div>
+        </div>
+        <div ng-if="meta.attachments.length">
+          <div sup-editor-widget-gallery ng-model="meta.attachments">
+            <figure ng-repeat="pic in meta.attachments"
+                    class="col-md-2 col-xs-3">
+              <a href="#" class="img-popup">
+                <img class="img-responsive" 
+                     ng-src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
+              </a>
+            </figure>
+          </div>
+        </div>
       </div>
+      
       <!-- #entries -->
       <!-- paginator -->
       <div class="paginator clearfix">

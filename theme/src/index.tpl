@@ -1,5 +1,9 @@
 {% import "g.tpl" as g with context %}
-<div class="cover">
+<div class="cover" style="{{meta.background.style}}">
+  <div class="bg-widget">
+    <div sup-editor-widget-bg ng-model="meta.background"></div>
+  </div>
+
   <div class="wrapper">
     <a href="#" class="entrance {{meta.entrance.class}}"
        sup-editor-widget-button ng-model="meta.entrance">

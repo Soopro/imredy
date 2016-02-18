@@ -1,11 +1,15 @@
 {% import "g.tpl" as g with context %}
-<div style="{{meta.background.style || site_meta.bg.style}}">
+<div class="body" style="{{meta.background.style || site_meta.bg.style}}">
+  <div class="bg-widget">
+    <div sup-editor-widget-bg ng-model="meta.background"></div>
+  </div>
+    
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
       <figure class="row" ng-if="meta.featured_img.src">
-        <img class="img-responsive banner"
-             ng-src="{{meta.featured_img.src}}" alt="{{meta.title}}">
+        <img class="img-responsive banner" alt="{{meta.title}}"
+             ng-src="{{meta.featured_img.src}}">
       </figure>
       <header class="upper">
         <h1>

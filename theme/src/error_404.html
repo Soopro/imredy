@@ -6,18 +6,23 @@
 </head>
 
 <body style="{{meta.background.style or site_meta.bg.style}}">
-  <article class="container paper">
-    <header class="upper">
-      <h1>{{meta.title or '404'}}</h1>
-    </header>
-    <hr class="row">
-    <!-- content -->
-    <div class="content">
-      {{content}}
-    </div>
-    <!-- #content -->
-    <hr class="row">
-  </article>
-  {% include '_cr_.html' %}
+  {% include '_nav_.html' %}
+  <section class="wrapper">
+    <article class="container paper">
+      <header class="upper">
+        <h1>{{meta.title or '404'}}</h1>
+      </header>
+      <hr class="row">
+      <!-- content -->
+      <div class="content">
+        {{content}}
+      </div>
+      <!-- #content -->
+      <hr class="row">
+    </article>
+    {% include '_cr_.html' %}
+  </section>
+  {% include '_sider_.html' %}
+  {% include '_js_.html' %}
 </body>
 </html>
