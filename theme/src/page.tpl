@@ -1,9 +1,10 @@
 {% import "g.tpl" as g with context %}
-<div class="body" style="{{meta.background.style || site_meta.bg.style}}">
+<div class="body" palette="{{g.opts.palette}}"
+     style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
     <div sup-editor-widget-bg ng-model="meta.background"></div>
   </div>
-    
+  
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">

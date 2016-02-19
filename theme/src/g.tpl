@@ -8,7 +8,7 @@
          value="{{theme_url+'/styles/default_banner.png'}}"></sup-set>
 
 <!-- Options -->         
-<sup-set ng-model="g.opts" value="{{theme_meta.options}}"></sup-set>
+<sup-set ng-model="g.opts" object="{{theme_meta.options}}"></sup-set>
 <sup-set ng-model="g.perpage"
          value="{{theme_meta.options.perpage || 6}}"></sup-set>
 

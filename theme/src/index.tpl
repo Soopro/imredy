@@ -1,5 +1,6 @@
 {% import "g.tpl" as g with context %}
-<div class="cover" style="{{meta.background.style}}">
+<div class="cover" palette="{{g.opts.palette}}"
+     style="{{meta.background.style}}">
   <div class="bg-widget">
     <div sup-editor-widget-bg ng-model="meta.background"></div>
   </div>

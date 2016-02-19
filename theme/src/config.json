@@ -10,8 +10,8 @@
   "capability":["ws"],
 	"previews":["preview1.jpg","preview2.jpg"],
 	"description": {
-	  "en": "A simple presonal profolio website.",
-    "zh": "这是一个简单的个人作品集网站。"
+	  "en": "A simple presonal profolio website. You can choose different color palette for the theme.",
+    "zh": "这是一个简单的个人作品集网站，您还可以选择不同色板来改换整体色调。"
 	},
 
   "templates":{
@@ -45,13 +45,15 @@
   "hide_properties": ["taxonomy", "tags", "parent"],
 
   "mode": 1,
-  
+
 	"options":{
+    "palette":"default",
+    "palette-optional": "default, red, blue, yellow, orange, pink",
 		"sortby":"date",
 		"excerpt_length":162,
 		"excerpt_ellipsis":"&hellip;",
 		"date_format":"%Y.%m.%d",
-		"perpage":6,
+		"perpage":2,
     "markdown":false
   }
 }

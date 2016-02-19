@@ -435,6 +435,7 @@ figure a:hover{
   text-align: center;
 }
 
+
 /* Editor
 ----------------------------------------------- */
 .sup-editor-canvas body {
@@ -483,4 +484,132 @@ html[lang^="zh"] body {
   font-family: RobotoDraft, Roboto,
                'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 
                'Helvetica Neue', sans-serif;
+}
+
+/* Color Palette
+----------------------------------------------- */
+
+/* Red #c33 */
+.palette-color-red,
+[palette="red"] h1,
+[palette="red"] h2,
+[palette="red"] h3,
+[palette="red"] a,
+[palette="red"] a:link
+[palette="red"] a:visited,
+[palette="red"] .ln:hover:before,
+[palette="red"] .ln:hover:after,
+[palette="red"] #primary-nav .nav a.active {
+  color: #c33;
+}
+.palette-bg-red,
+[palette="red"] .icon-btn:hover,
+[palette="red"] #primary-nav .nav a:hover {
+  background: #c33;
+}
+.palette-border-red,
+[palette="red"] .paper,
+[palette="red"] .entries,
+[palette="red"] .cover .entrance:hover {
+  border-color: #c33;
+}
+
+/* Blue #39f */
+.palette-color-blue,
+[palette="blue"] h1,
+[palette="blue"] h2,
+[palette="blue"] h3,
+[palette="blue"] a,
+[palette="blue"] a:link
+[palette="blue"] a:visited,
+[palette="blue"] .ln:hover:before,
+[palette="blue"] .ln:hover:after,
+[palette="blue"] #primary-nav .nav a.active {
+  color: #39f;
+}
+.palette-bg-blue,
+[palette="blue"] .icon-btn:hover,
+[palette="blue"] #primary-nav .nav a:hover {
+  background: #39f;
+}
+.palette-border-blue,
+[palette="blue"] .paper,
+[palette="blue"] .entries,
+[palette="blue"] .cover .entrance:hover {
+  border-color: #39f;
+}
+
+/* Yellow #fc0 */
+.palette-color-yellow,
+[palette="yellow"] h1,
+[palette="yellow"] h2,
+[palette="yellow"] h3,
+[palette="yellow"] a,
+[palette="yellow"] a:link
+[palette="yellow"] a:visited,
+[palette="yellow"] .ln:hover:before,
+[palette="yellow"] .ln:hover:after,
+[palette="yellow"] #primary-nav .nav a.active {
+  color: #fc0;
+}
+.palette-bg-yellow,
+[palette="yellow"] .icon-btn:hover,
+[palette="yellow"] #primary-nav .nav a:hover {
+  background: #fc0;
+}
+.palette-border-yellow,
+[palette="yellow"] .paper,
+[palette="yellow"] .entries,
+[palette="yellow"] .cover .entrance:hover {
+  border-color: #fc0;
+}
+
+/* Orange #f90 */
+.palette-color-orange,
+[palette="orange"] h1,
+[palette="orange"] h2,
+[palette="orange"] h3,
+[palette="orange"] a,
+[palette="orange"] a:link
+[palette="orange"] a:visited,
+[palette="orange"] .ln:hover:before,
+[palette="orange"] .ln:hover:after,
+[palette="orange"] #primary-nav .nav a.active {
+  color: #f80;
+}
+.palette-bg-orange,
+[palette="orange"] .icon-btn:hover,
+[palette="orange"] #primary-nav .nav a:hover {
+  background: #f80;
+}
+.palette-border-orange,
+[palette="orange"] .paper,
+[palette="orange"] .entries,
+[palette="orange"] .cover .entrance:hover {
+  border-color: #f80;
+}
+
+/* Pink #f90 */
+.palette-color-pink,
+[palette="pink"] h1,
+[palette="pink"] h2,
+[palette="pink"] h3,
+[palette="pink"] a,
+[palette="pink"] a:link
+[palette="pink"] a:visited,
+[palette="pink"] .ln:hover:before,
+[palette="pink"] .ln:hover:after,
+[palette="pink"] #primary-nav .nav a.active {
+  color: #f9c;
+}
+.palette-bg-pink,
+[palette="pink"] .icon-btn:hover,
+[palette="pink"] #primary-nav .nav a:hover {
+  background: #f9c;
+}
+.palette-border-pink,
+[palette="pink"] .paper,
+[palette="pink"] .entries,
+[palette="pink"] .cover .entrance:hover {
+  border-color: #f9c;
 }
