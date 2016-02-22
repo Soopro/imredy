@@ -1,6 +1,6 @@
 {
   "version":"1.0.0",
-  "alias":"im-redy",
+  "alias":"imredy",
 	"title":{
 	  "en":"I'm Redy",
     "zh":"I'm Redy"
@@ -11,7 +11,7 @@
 	"previews":["preview1.jpg","preview2.jpg"],
 	"description": {
 	  "en": "A simple presonal profolio website. You can choose different color palette for the theme.",
-    "zh": "这是一个简单的个人作品集网站，您还可以选择不同色板来改换整体色调。"
+      "zh": "这是一个简单的个人作品集网站，您还可以选择不同色板来改换整体色调。"
 	},
 
   "templates":{
