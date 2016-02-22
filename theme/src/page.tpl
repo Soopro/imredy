@@ -8,7 +8,8 @@
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
-      <figure class="row" ng-if="meta.featured_img.src">
+      <figure class="row" ng-if="meta.featured_img.src"
+       sup-editor-media ng-model="meta.featured_img">
         <img class="img-responsive banner" alt="{{meta.title}}"
              ng-src="{{meta.featured_img.src}}">
       </figure>
