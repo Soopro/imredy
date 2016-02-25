@@ -13,7 +13,7 @@
       <img src="{{meta.featured_img.src}}" 
            alt="{{meta.featured_img.title}}" />
       {% else %}
-      <span>{{meta.entrance.title or site_meta.title}}</span>
+      <span>{{meta.entrance.title|s or site_meta.title}}</span>
       {% endif %}
     </a>
   </div>
