@@ -12,7 +12,7 @@
            ng-src="{{meta.featured_img.src}}"   
            alt="{{meta.featured_img.title}}" />
       <span ng-if="!meta.featured_img.src">
-        {{ meta.entrance.title || site_meta.title }}
+        {{ meta.entrance.name || site_meta.title }}
       </span>
     </a>
   </div>
