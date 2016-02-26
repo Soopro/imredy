@@ -239,7 +239,7 @@ figure a:hover{
     display: none;
   }
   #primary-nav .nav {
-    display: none;
+    pointer-events: none;
     position: absolute;
     width: 100%;
     left: 15px;
@@ -250,6 +250,13 @@ figure a:hover{
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
                 0 6px 10px 0 rgba(0,0,0,.14),
                 0 1px 18px 0 rgba(0,0,0,.12);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+  }
+  #primary-nav .nav.nav-open {
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 

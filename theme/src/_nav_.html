@@ -1,5 +1,5 @@
 <nav id="primary-nav">
-  <a href="#" class="icon-btn menu menu-toggle" data-toggle="collapse"></a>
+  <a href="#" class="icon-btn menu menu-toggle"></a>
   <a href="{{base_url}}" class="logo">
     <img src="{{site_meta.logo or g.default_logo}}" 
          alt="{{site_meta.title}}" />
@@ -9,7 +9,7 @@
     <li>
       <a href="{{item.url}}"
          class="{{'active' if item.url|path == meta.url|path 
-                  or item.alias == meta.type }}">
+                  or item.related_type == meta.type }}">
         {{item.title}}
       </a>
     </li>
