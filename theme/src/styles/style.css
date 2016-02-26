@@ -21,7 +21,7 @@ body,p,h1,h2,h3,h4,h5,h6,td,th {
 }
 
 body {
-  background: #fff;
+  background-color: #fff;
   background-position: right top;
   background-repeat: no-repeat;
 }
@@ -399,7 +399,9 @@ figure a:hover{
   padding-right: 15px;
   padding-left: 15px;
   text-align: center;
-  background: #fff;
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .cover .wrapper {
   position: relative;
@@ -451,10 +453,11 @@ figure a:hover{
 .sup-editor-canvas .body {
   position: relative;
   min-height: 100%;
-  background: #fff;
+  background-color: #fff;
   background-position: right top;
   background-repeat: no-repeat;
 }
+
 .sup-editor-canvas .bg-widget {
   position: absolute;
   top: auto;
