@@ -38,7 +38,11 @@ a:link
 a:visited {
   color: #c33;
 }
-
+img,
+embed,
+iframe {
+  max-width: 100%;
+}
 figure img {
   max-width: 100%;
 }
