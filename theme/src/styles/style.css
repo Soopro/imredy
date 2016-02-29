@@ -39,6 +39,8 @@ a:visited {
   color: #c33;
 }
 img,
+video,
+audio,
 embed,
 iframe {
   max-width: 100%;
