@@ -28,12 +28,15 @@
         {{content}}
       </div>
       <!-- #content -->
+      <!-- extensions -->
+      {{slots.comment or ''}}
+      <!-- #extensions -->
       <!-- entries -->
       <div class="row">
         {% for pic in meta.attachments %}
         <figure class="col-md-2 col-xs-3">
           <a href="{{pic.src}}" class="img-popup">
-            <img class="img-responsive" 
+            <img class="img-responsive"
                  src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
           </a>
         </figure>
