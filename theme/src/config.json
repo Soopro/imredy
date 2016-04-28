@@ -1,5 +1,5 @@
 {
-  "version":"1.1.4",
+  "version":"1.1.5",
   "alias":"imredy",
 	"title":{
 	  "en":"I'm Redy",
@@ -42,7 +42,7 @@
   "content_types":{
     "post":{"title": "Posts"}
   },
-
+  "allowed_slots":["comment"],
   "hide_properties": ["taxonomy", "tags", "parent"],
 
   "mode": 1,

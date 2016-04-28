@@ -61,9 +61,10 @@ figure a:hover{
 }
 
 
-*:focus {
-  outline: 0 !important;
-  outline-offset: 0 !important;
+a:focus,
+button:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .upper {
@@ -498,7 +499,7 @@ figure a:hover{
 html[lang^="zh"],
 html[lang^="zh"] body {
   font-family: RobotoDraft, Roboto,
-               'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 
+               'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
                'Helvetica Neue', sans-serif;
 }
 
