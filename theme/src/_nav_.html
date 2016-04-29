@@ -1,15 +1,16 @@
 <nav id="primary-nav">
   <a href="#" class="icon-btn menu menu-toggle"></a>
   <a href="{{base_url}}" class="logo">
-    <img src="{{site_meta.logo or g.default_logo}}" 
+    <img src="{{site_meta.logo or g.default_logo}}"
          alt="{{site_meta.title}}" />
   </a>
   <ul class="nav">
     {% for item in menu.primary %}
     <li>
       <a href="{{item.url}}"
-         class="{{'active' if item.url|path == meta.url|path 
-                  or item.related_type == meta.type }}">
+         class="{{'active' if item.url|path == meta.url|path
+                  or item.related_type == meta.type }}
+                {{item.class}}">
         {{item.title}}
       </a>
     </li>

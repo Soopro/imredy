@@ -17,6 +17,7 @@ $(document).ready(function($){
   }
   if($('.menu-toggle').length > 0){
     $('.menu-toggle').click(function(e){
+      console.log('adsfdsafdsf')
       var nav = $(this).parent().find('.nav');
       if (nav.hasClass('nav-open')){
         nav.removeClass('nav-open');
@@ -26,7 +27,7 @@ $(document).ready(function($){
       menu_click_outside(nav);
       return false;
     });
-    function disable_menu_toggle(element){
+    var disable_menu_toggle = function (element){
       while (element) {
         var _disabled = $(element).attr('disable-menu-toggle');
         if(_disabled || _disabled==''){
@@ -37,7 +38,7 @@ $(document).ready(function($){
       }
       return false
     }
-    function menu_click_outside(nav){
+    var menu_click_outside = function (nav){
       var click_outside = function(e){
         if (event.target && disable_menu_toggle(event.target)){
           return false;
@@ -46,10 +47,8 @@ $(document).ready(function($){
           nav.removeClass('nav-open');
         }
         $(document).off({'click':click_outside});
-        return false;
       }
       $(document).on('click', click_outside);
     }
-    
   }
 });
