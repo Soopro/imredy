@@ -17,7 +17,6 @@ $(document).ready(function($){
   }
   if($('.menu-toggle').length > 0){
     $('.menu-toggle').click(function(e){
-      console.log('adsfdsafdsf')
       var nav = $(this).parent().find('.nav');
       if (nav.hasClass('nav-open')){
         nav.removeClass('nav-open');
