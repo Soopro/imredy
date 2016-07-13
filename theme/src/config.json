@@ -1,5 +1,5 @@
 {
-  "version":"1.3.0",
+  "version":"1.4.0",
   "slug":"imredy",
 	"title":{
 	  "en":"I'm Redy",
@@ -20,9 +20,9 @@
       "en": "Cover",
       "zh": "封面"
     },
-    "journal":{
-      "en": "Journal",
-      "zh": "日志首页"
+    "posts-index":{
+      "en": "Posts Index",
+      "zh": "文章首页"
     },
     "page":{
       "en": "Static Page",
@@ -36,16 +36,18 @@
       "en": "Portfolio",
       "zh": "作品页"
     },
-    "error_404": "404"
+    "error-404": "404"
   },
 
   "content_types":{
     "post":{"title": "Posts"}
   },
+  "reserved_contents": {
+    "post/index": "posts-index",
+    "error-404": true
+  },
   "allowed_slots":["comment"],
-  "hide_properties": ["taxonomy", "tags", "parent"],
 
-  "mode": 1,
 
 	"options":{
     "palette":"default",

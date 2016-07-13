@@ -12,11 +12,17 @@
 <sup-set ng-model="g.perpage"
          value="{{theme_meta.options.perpage || 6}}"></sup-set>
 
+<sup-set ng-model="g.ver" value="{{theme_meta.version}}"></sup-set>
+
 <!-- Styles -->
-<link ng-href="{{theme_url}}/libs/bootstrap.min.css" rel="stylesheet">
-<link ng-href="{{theme_url}}/libs/magnific-popup.css" rel="stylesheet">
-<link ng-href="{{theme_url}}/styles/fonts/fonts.css" rel="stylesheet">
-<link ng-href="{{theme_url}}/styles/style.css" rel="stylesheet">
+<link ng-href="{{theme_url}}/libs/bootstrap.min.css?{{g.ver}}"
+      rel="stylesheet">
+<link ng-href="{{theme_url}}/libs/magnific-popup.css?{{g.ver}}"
+      rel="stylesheet">
+<link ng-href="{{theme_url}}/styles/fonts/fonts.css?{{g.ver}}"
+      rel="stylesheet">
+<link ng-href="{{theme_url}}/styles/style.css?{{g.ver}}"
+      rel="stylesheet">
 
 <!-- Custom styles -->
 <style ng-bind="theme_meta.styles"></style>

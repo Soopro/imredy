@@ -6,6 +6,8 @@
 
 
 {% set opts = theme_meta.options %}
+{% set ver = theme_meta.version %}
+
 <!-- paged -->
 {% set paged = args.paged|int if args.paged and args.paged|int > 0 else 1 %}
 <!-- perpage -->
@@ -14,5 +16,5 @@
 {% set robots = 'index, follow' if not meta.is_404 else 'noindex, nofollow' %}
 
 <!-- custom styles -->
-{% set custom_styles = '<style>'+theme_meta.styles+'</style>' 
+{% set custom_styles = '<style>'+theme_meta.styles+'</style>'
    if theme_meta.styles else '' %}
