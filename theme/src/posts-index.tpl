@@ -2,7 +2,7 @@
 <div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-editor-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.background"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -11,13 +11,13 @@
       <header>
         <h1>
           <span default="{{_('Journal')}}"
-                sup-editor-meta ng-model="meta.title"></span>
+                sup-widget-text ng-model="meta.title"></span>
         </h1>
       </header>
       <span sup-query="post" ng-model="query.posts"></span>
       <!-- entry -->
       <div class="row entry" ng-repeat="post in query.posts"
-           sup-editor-open file="post">
+           sup-widget-open file="post">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="#">
             <img class="img-responsive" alt="{{post.title}}" 

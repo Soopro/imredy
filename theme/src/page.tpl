@@ -2,21 +2,21 @@
 <div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-editor-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.background"></div>
   </div>
   
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
       <figure class="row" ng-if="meta.featured_img.src"
-       sup-editor-media ng-model="meta.featured_img">
+       sup-widget-media ng-model="meta.featured_img">
         <img class="img-responsive banner" alt="{{meta.title}}"
              ng-src="{{meta.featured_img.src}}">
       </figure>
       <header class="upper">
         <h1>
           <span default="{{_('Title')}}" 
-                sup-editor-meta ng-model="meta.title"></span>
+                sup-widget-text ng-model="meta.title"></span>
         </h1>
       </header>
       <hr class="row">

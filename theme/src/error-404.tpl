@@ -2,7 +2,7 @@
 <div palette="{{g.opts.palette}}" class="body {{meta.background.class}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-editor-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.background"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -15,7 +15,7 @@
       <header class="upper">
         <h1>
           <span default="{{_('Error 404')}}" 
-                sup-editor-meta ng-model="meta.title"></span>
+                sup-widget-text ng-model="meta.title"></span>
         </h1>
       </header>
       <hr class="row">

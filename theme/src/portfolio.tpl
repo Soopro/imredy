@@ -2,7 +2,7 @@
 <div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-editor-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.background"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -11,11 +11,11 @@
       <header>
         <h1>
           <span default="{{_('Works')}}" 
-                sup-editor-meta ng-model="meta.title"></span>
+                sup-widget-text ng-model="meta.title"></span>
         </h1>
       </header>
       <!-- entries -->
-      <div class="row" sup-editor-widget-gallery ng-model="meta.attachments">
+      <div class="row" sup-widget-gallery ng-model="meta.attachments">
         <figure ng-repeat="works in meta.attachments"
                 class="col-lg-3 col-md-4 col-sm-6">
           <a href="#" class="img-popup {{works.class}}">
