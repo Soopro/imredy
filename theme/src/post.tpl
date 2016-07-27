@@ -19,7 +19,7 @@
         </h1>
       </header>
       <div class="date">
-        {{meta.date_formatted}}
+        {{meta|date_formatted}}
       </div>
       <hr class="row">
       <!-- content -->
