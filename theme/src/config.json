@@ -1,5 +1,5 @@
 {
-  "version":"1.4.1",
+  "version":"1.5.0",
   "slug":"imredy",
 	"title":{
 	  "en":"I'm Redy",
@@ -48,15 +48,9 @@
   },
   "allowed_slots":["comment"],
 
-
 	"options":{
     "palette":"default",
     "palette-optional": "default, red, blue, yellow, orange, pink",
 		"sortby":"date",
-		"excerpt_length":162,
-		"excerpt_ellipsis":"&hellip;",
-		"date_format":"%Y.%m.%d",
-		"perpage":2,
-    "markdown":false
   }
 }

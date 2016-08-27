@@ -13,14 +13,14 @@
       <header>
         <h1>{{meta.title}}</h1>
       </header>
-      {% set booklet = stapler(pages|type('post'), g.paged, g.perpage) %}
-      {% set posts = booklet.pages %}
+      {% set booklet = query('post', args.paged) %}
+      {% set posts = booklet.contents %}
       {% for post in posts %}
       <!-- entry -->
       <div class="row entry">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="{{post.url}}">
-            <img class="img-responsive" alt="{{post.title}}" 
+            <img class="img-responsive" alt="{{post.title}}"
                  src="{{post.featured_img.src|thumbnail}}" />
           </a>
         </figure>
@@ -37,9 +37,9 @@
       <!-- #entry -->
       {% endfor %}
       <!-- paginator -->
-      {% if booklet.max and booklet.paged %}
+      {% if booklet.total_pages > 1 %}
       <div class="paginator clearfix">
-      	{% set has_prev_page = booklet.paged < booklet.max %}
+      	{% set has_prev_page = booklet.paged < booklet.total_pages %}
       	{% set has_next_page = booklet.paged > 1 %}
         <div class="text-left">
           <div class="ln next {{'disabled' if not has_next_page}}">

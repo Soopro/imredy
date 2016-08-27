@@ -1,8 +1,10 @@
 {% import "g.tpl" as g with context %}
-<div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
+<div class="body {{meta.background.class}}"
+     palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg
+         ng-model="meta.background"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -10,17 +12,22 @@
     <div class="container entries">
       <header>
         <h1>
-          <span default="{{_('Journal')}}"
-                sup-widget-text ng-model="meta.title"></span>
+          <span sup-widget-text
+                default="{{_('Journal')}}"
+                ng-model="meta.title"></span>
         </h1>
       </header>
-      <span sup-query="post" ng-model="query.posts"></span>
+      <span sup-query="post"
+            ng-model="query.posts"></span>
       <!-- entry -->
-      <div class="row entry" ng-repeat="post in query.posts"
-           sup-widget-open file="post">
+      <div class="row entry"
+           ng-repeat="post in query.posts.contents"
+           sup-widget-open
+           file="post">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="#">
-            <img class="img-responsive" alt="{{post.title}}" 
+            <img class="img-responsive"
+                 alt="{{post.title}}"
                  ng-src="{{post.featured_img.src|thumbnail}}" />
           </a>
         </figure>
