@@ -51,6 +51,6 @@
 	"options":{
     "palette":"default",
     "palette-optional": "default, red, blue, yellow, orange, pink",
-		"sortby":"date",
+		"sortby":"date"
   }
 }

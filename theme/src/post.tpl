@@ -31,10 +31,10 @@
       <div class="row">
         <div ng-if="!meta.attachments || meta.attachments.length == 0"
              class="gallery-widget">
-          <div sup-widget-gallery ng-model="meta.attachments"></div>
+          <div sup-widget-collection ng-model="meta.attachments"></div>
         </div>
         <div ng-if="meta.attachments.length">
-          <div sup-widget-gallery ng-model="meta.attachments">
+          <div sup-widget-collection ng-model="meta.attachments">
             <figure ng-repeat="pic in meta.attachments"
                     class="col-md-2 col-xs-3">
               <a href="#" class="img-popup">

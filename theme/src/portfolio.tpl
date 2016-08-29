@@ -15,7 +15,7 @@
         </h1>
       </header>
       <!-- entries -->
-      <div class="row" sup-widget-gallery ng-model="meta.attachments">
+      <div class="row" sup-widget-collection ng-model="meta.attachments">
         <figure ng-repeat="works in meta.attachments"
                 class="col-lg-3 col-md-4 col-sm-6">
           <a href="#" class="img-popup {{works.class}}">
