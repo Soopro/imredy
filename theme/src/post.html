@@ -29,7 +29,7 @@
       </div>
       <!-- #content -->
       <!-- extensions -->
-      {{slots.comment or ''}}
+      {{slot.comment or ''}}
       <!-- #extensions -->
       <!-- entries -->
       <div class="row">
@@ -44,7 +44,7 @@
       </div>
       <!-- #entries -->
       <!-- paginator -->
-      {% set channel = magnet(pages|type('post'), meta) %}
+      {% set channel = query_sides(meta.id, 'post') %}
       <div class="paginator clearfix">
         <div class="text-left">
           <div class="ln next {{'disabled' if not channel.before}}">

@@ -1,21 +1,26 @@
 {% import "g.tpl" as g with context %}
-<div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
+<div class="body {{meta.background.class}}"
+     palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg
+         ng-model="meta.background"></div>
   </div>
   {% include '_nav_.tpl' %}
   <section class="wrapper">
     <article class="container paper">
-      <figure class="row" ng-if="meta.featured_img.src"
-       sup-widget-media ng-model="meta.featured_img">
+      <figure class="row"
+              ng-if="meta.featured_img.src"
+              sup-widget-media
+              ng-model="meta.featured_img">
         <img class="img-responsive" alt="{{meta.title}}"
              ng-src="{{meta.featured_img.src}}">
       </figure>
       <header class="upper">
         <h1>
-          <span default="{{_('Title')}}" 
-                sup-widget-text ng-model="meta.title"></span>
+          <span default="{{_('Title')}}"
+                sup-widget-text
+                ng-model="meta.title"></span>
         </h1>
       </header>
       <div class="date">
@@ -23,29 +28,43 @@
       </div>
       <hr class="row">
       <!-- content -->
-      <div class="content" default="{{_('$_CONTENT')}}"
-           sup-angular-wysiwyg ng-model="content">
+      <div class="content"
+           default="{{_('$_CONTENT')}}"
+           sup-angular-wysiwyg
+           ng-model="content">
       </div>
       <!-- #content -->
       <!-- entries -->
       <div class="row">
         <div ng-if="!meta.attachments || meta.attachments.length == 0"
              class="gallery-widget">
-          <div sup-widget-collection ng-model="meta.attachments"></div>
+          <div sup-widget-collection
+               ng-model="meta.attachments">
+             <figure class="col-md-2 col-xs-3">
+               <a href="#"
+                  class="img-popup">
+                 <img class="img-responsive"
+                      ng-src="{{g.default_thumbnail}}"/>
+               </a>
+             </figure>
+          </div>
         </div>
         <div ng-if="meta.attachments.length">
-          <div sup-widget-collection ng-model="meta.attachments">
+          <div sup-widget-collection
+               ng-model="meta.attachments">
             <figure ng-repeat="pic in meta.attachments"
                     class="col-md-2 col-xs-3">
-              <a href="#" class="img-popup">
-                <img class="img-responsive" 
-                     ng-src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
+              <a href="#"
+                 class="img-popup">
+                <img class="img-responsive"
+                     ng-src="{{pic.src|thumbnail}}"
+                     alt="{{pic.title}}"/>
               </a>
             </figure>
           </div>
         </div>
       </div>
-      
+
       <!-- #entries -->
       <!-- paginator -->
       <div class="paginator clearfix">

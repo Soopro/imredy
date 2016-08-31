@@ -3,18 +3,9 @@
 {% set default_thumbnail = theme_url+'/styles/default_thumbnail.png' %}
 {% set default_poster = theme_url+'/styles/default_poster.png' %}
 {% set default_banner = theme_url+'/styles/default_banner.png' %}
-
-
-{% set opts = theme_meta.options %}
-{% set ver = theme_meta.version %}
-
-<!-- paged -->
-{% set paged = args.paged|int if args.paged and args.paged|int > 0 else 1 %}
-<!-- perpage -->
-{% set perpage = opts.perpage|int if opts.perpage else 12 %}
+{% set default_img = theme_url+'/styles/default_img.png' %}
 
 {% set robots = 'index, follow' if not meta.is_404 else 'noindex, nofollow' %}
 
-<!-- custom styles -->
-{% set custom_styles = '<style>'+theme_meta.styles+'</style>'
-   if theme_meta.styles else '' %}
+{% set opts = theme_meta.options %}
+{% set ver = theme_meta.version %}

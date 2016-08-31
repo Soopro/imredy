@@ -6,6 +6,8 @@
          value="{{theme_url+'/styles/default_poster.png'}}"></sup-set>
 <sup-set ng-model="g.default_banner"
          value="{{theme_url+'/styles/default_banner.png'}}"></sup-set>
+<sup-set ng-model="g.default_img"
+         value="{{theme_url+'/styles/default_img.png'}}"></sup-set>
 
 <!-- Options -->
 <sup-set ng-model="g.opts" object="theme_meta.options"></sup-set>
