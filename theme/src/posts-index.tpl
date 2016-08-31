@@ -33,7 +33,7 @@
             <img class="img-responsive"
                  alt="{{post.title}}"
                  ng-if="!post.featured_img.src"
-                 ng-src="{{g.default_thumbnail}}" />
+                 ng-src="{{g.default_img}}" />
           </a>
         </figure>
         <div class="col-lg-10 col-md-9 col-sm-8">
