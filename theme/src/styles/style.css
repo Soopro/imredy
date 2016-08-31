@@ -485,6 +485,12 @@ button:focus {
   height: 100%;
 }
 
+.sup-editor-canvas .date,
+.sup-editor-canvas .attachments {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 
 /* Languages
 /* ----------------------------------------------- */
