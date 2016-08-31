@@ -35,33 +35,27 @@
       </div>
       <!-- #content -->
       <!-- entries -->
-      <div class="row">
-        <div ng-if="!meta.attachments || meta.attachments.length == 0"
-             class="gallery-widget">
-          <div sup-widget-collection
-               ng-model="meta.attachments">
-             <figure class="col-md-2 col-xs-3">
-               <a href="#"
-                  class="img-popup">
-                 <img class="img-responsive"
-                      ng-src="{{g.default_thumbnail}}"/>
-               </a>
-             </figure>
-          </div>
-        </div>
-        <div ng-if="meta.attachments.length">
-          <div sup-widget-collection
-               ng-model="meta.attachments">
-            <figure ng-repeat="pic in meta.attachments"
-                    class="col-md-2 col-xs-3">
-              <a href="#"
-                 class="img-popup">
-                <img class="img-responsive"
-                     ng-src="{{pic.src|thumbnail}}"
-                     alt="{{pic.title}}"/>
-              </a>
-            </figure>
-          </div>
+      <div class="attachments"
+           sup-widget-collection
+           ng-model="meta.attachments">
+        <div class="row">
+          <figure ng-repeat="pic in meta.attachments"
+                 class="col-md-2 col-xs-3">
+            <a href="#"
+               class="img-popup">
+              <img class="img-responsive"
+                   ng-src="{{pic.src|thumbnail}}"
+                   alt="{{pic.title}}"/>
+            </a>
+          </figure>
+          <figure class="col-md-2 col-xs-3"
+                  ng-if="!meta.attachments || meta.attachments.length == 0">
+            <a href="#"
+               class="img-popup">
+              <img class="img-responsive"
+                   ng-src="{{g.default_thumbnail}}"/>
+            </a>
+          </figure>
         </div>
       </div>
 

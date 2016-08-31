@@ -31,17 +31,22 @@
       <!-- extensions -->
       {{slot.comment or ''}}
       <!-- #extensions -->
+      {{g.ver}}
       <!-- entries -->
-      <div class="row">
-        {% for pic in meta.attachments %}
-        <figure class="col-md-2 col-xs-3">
-          <a href="{{pic.src}}" class="img-popup">
-            <img class="img-responsive"
-                 src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
-          </a>
-        </figure>
-        {% endfor %}
+      {% if meta.attachments %}
+      <div class="attachments">
+        <div class="row">
+          {% for pic in meta.attachments %}
+          <figure class="col-md-2 col-xs-3">
+            <a href="{{pic.src}}" class="img-popup">
+              <img class="img-responsive"
+                   src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
+            </a>
+          </figure>
+          {% endfor %}
+        </div>
       </div>
+      {% endif %}
       <!-- #entries -->
       <!-- paginator -->
       {% set channel = query_sides(meta.id, 'post') %}
