@@ -15,11 +15,11 @@
       </header>
       <!-- entries -->
       <div class="row">
-        {% for works in meta.attachments %}
+        {% for works in meta.series %}
         <figure class="col-lg-3 col-md-4 col-sm-6">
-          <a href="{{works.src}}" 
+          <a href="{{works.src}}"
              class="img-popup {{works.class}}">
-            <img class="img-responsive" 
+            <img class="img-responsive"
                  src="{{works.src|thumbnail}}" alt="{{works.title}}" />
           </a>
         </figure>
