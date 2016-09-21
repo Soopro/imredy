@@ -1,4 +1,6 @@
-{% import "g.tpl" as g with context %}
+{% import "g.tpl" %}
+{% include '_css_.tpl' %}
+
 <div class="body {{meta.background.class}}"
      palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
@@ -40,16 +42,19 @@
            ng-model="meta.attachments">
         <div class="row">
           <figure ng-repeat="pic in meta.attachments"
-                 class="col-md-2 col-xs-3">
+                  ng-if="pic.type == 'image'"
+                  class="col-md-2 col-xs-3">
             <a href="#"
                class="img-popup">
-              <img class="img-responsive"
-                   ng-src="{{pic.src|thumbnail}}"
-                   alt="{{pic.title}}"/>
+              <img class="img-responsive img-holder"
+                   alt="{{pic.title}}"
+                   ng-src="{{g.img_holder_px}}"
+                   style="{{'background-image:
+                             url('+(pic.src|thumbnail)+')'}}"/>
             </a>
           </figure>
           <figure class="col-md-2 col-xs-3"
-                  ng-if="!meta.attachments || meta.attachments.length == 0">
+                  ng-if="meta.attachments|is_empty">
             <a href="#"
                class="img-popup">
               <img class="img-responsive"

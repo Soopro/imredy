@@ -1,4 +1,6 @@
-{% import "g.tpl" as g with context %}
+{% import "g.tpl" %}
+{% include '_css_.tpl' %}
+
 <div palette="{{g.opts.palette}}" class="body {{meta.background.class}}"
      style="{{meta.background.style || site_meta.bg.style}}">
   <div class="bg-widget">
@@ -14,7 +16,7 @@
       </figure>
       <header class="upper">
         <h1>
-          <span default="{{_('Error 404')}}" 
+          <span default="{{_('Error 404')}}"
                 sup-widget-text ng-model="meta.title"></span>
         </h1>
       </header>

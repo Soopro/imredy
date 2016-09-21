@@ -49,7 +49,7 @@ figure img {
   max-width: 100%;
 }
 figure a {
-  max-width: 100%;
+  width: 100%;
   display: inline-block;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -456,6 +456,19 @@ button:focus {
   text-align: center;
 }
 
+/* image holder
+----------------------------------------------- */
+.img-holder {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.img-holder.contain {
+  background-size: contain;
+}
 
 /* Editor
 ----------------------------------------------- */

@@ -5,6 +5,8 @@
 {% set default_banner = theme_url+'/styles/default_banner.png' %}
 {% set default_img = theme_url+'/styles/default_img.jpg' %}
 
+{% set img_holder_px = theme_url+"/styles/trans.png" %}
+
 {% set robots = 'index, follow' if not meta.is_404 else 'noindex, nofollow' %}
 
 {% set opts = theme_meta.options %}

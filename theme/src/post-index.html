@@ -11,7 +11,7 @@
   <section class="wrapper">
     <div class="container entries">
       <header>
-        <h1>{{meta.title}}</h1>
+        <h1>{{meta.title or _('Journal')}}</h1>
       </header>
       {% set booklet = query('post', args.paged) %}
       {% set posts = booklet.contents %}
@@ -21,10 +21,14 @@
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="{{post.url}}">
             {% if post.featured_img.src %}
-            <img class="img-responsive" alt="{{post.title}}"
-                 src="{{post.featured_img.src|thumbnail}}" />
+            <img class="img-responsive img-holder"
+                 alt="{{post.title}}"
+                 src="{{g.img_holder_px}}"
+                 style="background-image:
+                        url('{{post.featured_img.src|thumbnail}}')" />
             {% else %}
-            <img class="img-responsive" alt="{{post.title}}"
+            <img class="img-responsive"
+                 alt="{{post.title}}"
                  src="{{g.default_img}}" />
             {% endif %}
           </a>

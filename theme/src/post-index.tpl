@@ -1,4 +1,6 @@
-{% import "g.tpl" as g with context %}
+{% import "g.tpl" %}
+{% include '_css_.tpl' %}
+
 <div class="body {{meta.background.class}}"
      palette="{{g.opts.palette}}"
      style="{{meta.background.style || site_meta.bg.style}}">
@@ -26,10 +28,12 @@
            file="post">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="#">
-            <img class="img-responsive"
+            <img class="img-responsive img-holder"
                  alt="{{post.title}}"
                  ng-if="post.featured_img.src"
-                 ng-src="{{post.featured_img.src|thumbnail}}" />
+                 ng-src="{{g.img_holder_px}}"
+                 style="{{'background-image:
+                           url('+(post.featured_img.src|thumbnail)+')'}}" />
             <img class="img-responsive"
                  alt="{{post.title}}"
                  ng-if="!post.featured_img.src"

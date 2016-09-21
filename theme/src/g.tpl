@@ -9,22 +9,12 @@
 <sup-set ng-model="g.default_img"
          value="{{theme_url+'/styles/default_img.jpg'}}"></sup-set>
 
-<!-- Options -->
+<sup-set ng-model="g.img_holder_px"
+         value="{{theme_url+'/styles/trans.png'}}"></sup-set>
+
+
 <sup-set ng-model="g.opts" object="theme_meta.options"></sup-set>
 <sup-set ng-model="g.perpage"
          value="{{theme_meta.options.perpage || 6}}"></sup-set>
 
 <sup-set ng-model="g.ver" value="{{theme_meta.version}}"></sup-set>
-
-<!-- Styles -->
-<link ng-href="{{theme_url}}/libs/bootstrap.min.css?{{g.ver}}"
-      rel="stylesheet">
-<link ng-href="{{theme_url}}/libs/magnific-popup.css?{{g.ver}}"
-      rel="stylesheet">
-<link ng-href="{{theme_url}}/styles/fonts/fonts.css?{{g.ver}}"
-      rel="stylesheet">
-<link ng-href="{{theme_url}}/styles/style.css?{{g.ver}}"
-      rel="stylesheet">
-
-<!-- Custom styles -->
-<style ng-bind="theme_meta.styles"></style>

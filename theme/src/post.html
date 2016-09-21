@@ -36,11 +36,14 @@
       {% if meta.attachments %}
       <div class="attachments">
         <div class="row">
-          {% for pic in meta.attachments %}
+          {% for pic in meta.attachments if pic.type == 'image' %}
           <figure class="col-md-2 col-xs-3">
             <a href="{{pic.src}}" class="img-popup">
-              <img class="img-responsive"
-                   src="{{pic.src|thumbnail}}" alt="{{pic.title}}"/>
+              <img class="img-responsive img-holder"
+                   alt="{{pic.title}}"
+                   src="{{g.img_holder_px}}"
+                   style="background-image:
+                          url('{{pic.src|thumbnail}}')" />
             </a>
           </figure>
           {% endfor %}

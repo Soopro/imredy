@@ -11,7 +11,7 @@
   {% if meta.title %} | {{ meta.title | striptags }}{% endif %}
 </title>
 
-<!-- Browser support -->
+<!-- browser support -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,18 +19,13 @@
 <meta name="format-detection" content="telephone=yes">
 <meta name="renderer" content="webkit">
 
-<!-- Favicons -->
+<!-- favicons -->
 <link href="{{site_meta.favicon or g.default_favicon}}"
       rel="apple-touch-icon-precomposed" sizes="144x144">
 <link href="{{site_meta.favicon or g.default_favicon}}"
       rel="shortcut icon">
 
-<!-- Styles -->
-<link href="{{theme_url}}/libs/bootstrap.min.css?{{g.ver}}" rel="stylesheet">
-<link href="{{theme_url}}/libs/magnific-popup.css?{{g.ver}}" rel="stylesheet">
-<link href="{{theme_url}}/styles/fonts/fonts.css?{{g.ver}}" rel="stylesheet">
-<link href="{{theme_url}}/styles/style.css?{{g.ver}}" rel="stylesheet">
-<style>{{theme_meta.styles}}</style>
+{% include '_css_.html' %}
 
 
 {{site_meta.analytics}}
