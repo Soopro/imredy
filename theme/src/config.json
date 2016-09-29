@@ -50,6 +50,9 @@
     "post/index": true,
     "error-404": true
   },
+  "taxonomies": {
+    "category": {"title": "Categories", "content_types": ["post"]}
+  },
   "allowed_slots":["comment"],
 
 	"options":{
