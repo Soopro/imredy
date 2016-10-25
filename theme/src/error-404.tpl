@@ -1,10 +1,10 @@
 {% import "g.tpl" %}
 {% include '_css_.tpl' %}
 
-<div palette="{{g.opts.palette}}" class="body {{meta.background.class}}"
-     style="{{meta.background.style || site_meta.bg.style}}">
+<div palette="{{g.opts.palette}}" class="body {{meta.bg.class}}"
+     style="{{meta.bg.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.bg"></div>
   </div>
 
   {% include '_nav_.tpl' %}

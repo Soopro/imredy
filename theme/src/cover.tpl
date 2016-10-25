@@ -1,8 +1,8 @@
 {% import "g.tpl" as g with context %}
-<div class="cover {{meta.background.class}}" palette="{{g.opts.palette}}"
-     style="{{meta.background.style}}">
+<div class="cover {{meta.bg.class}}" palette="{{g.opts.palette}}"
+     style="{{meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.bg"></div>
   </div>
 
   <div class="wrapper">

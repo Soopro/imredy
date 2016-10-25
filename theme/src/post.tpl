@@ -1,12 +1,12 @@
 {% import "g.tpl" %}
 {% include '_css_.tpl' %}
 
-<div class="body {{meta.background.class}}"
+<div class="body {{meta.bg.class}}"
      palette="{{g.opts.palette}}"
-     style="{{meta.background.style || site_meta.bg.style}}">
+     style="{{meta.bg.style || site_meta.bg.style}}">
   <div class="bg-widget">
     <div sup-widget-bg
-         ng-model="meta.background"></div>
+         ng-model="meta.bg"></div>
   </div>
   {% include '_nav_.tpl' %}
   <section class="wrapper">
@@ -38,27 +38,33 @@
       <!-- #content -->
       <!-- entries -->
       <div class="attachments"
-           sup-widget-collection
+           sup-widget-series
+           default="{{[
+             {
+               'title': _('Attachment'),
+               'src': theme_url+'/styles/default_img.png'
+             }
+           ]}}"
            ng-model="meta.attachments">
         <div class="row">
           <figure ng-repeat="pic in meta.attachments"
                   ng-if="pic.type == 'image'"
-                  class="col-md-2 col-xs-3">
+                  class="col-md-2 col-xs-3"
+                  series-item>
             <a href="#"
                class="img-popup">
               <img class="img-responsive img-holder"
                    alt="{{pic.title}}"
-                   ng-src="{{g.img_holder_px}}"
-                   style="{{'background-image:
-                             url('+(pic.src|thumbnail)+')'}}"/>
+                   ng-src="{{g.img_holder}}"
+                   style="{{pic.src|bg_img}}"/>
             </a>
           </figure>
           <figure class="col-md-2 col-xs-3"
-                  ng-if="meta.attachments|is_empty">
+                  series-item-create>
             <a href="#"
                class="img-popup">
               <img class="img-responsive"
-                   ng-src="{{g.default_thumbnail}}"/>
+                   ng-src="{{g.default_img}}"/>
             </a>
           </figure>
         </div>

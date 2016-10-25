@@ -1,50 +1,29 @@
 {
-  "version":"1.5.6",
-  "slug":"imredy",
-	"title":{
-	  "en":"I'm Redy",
-    "zh":"I'm Redy"
-	},
-  "author":"Redy Ru",
-  "capability":["ws"],
-	"thumbnail":"thumbnail.png",
-  "poster":"poster.jpg",
-	"previews":["preview1.jpg", "preview2.jpg"],
+  "version": "1.5.7",
+  "slug": "imredy",
+	"title": "I'm Redy",
+  "author": "Redy Ru",
+  "capabilities": ["ws"],
+	"icon": "icon.png",
+  "poster": "poster.jpg",
+	"previews": ["preview1.jpg", "preview2.jpg"],
 	"description": {
 	  "en": "A simple presonal profolio website. You can choose different color palette for the theme.",
     "zh": "这是一个简单的个人作品集网站，您还可以选择不同色板来改换整体色调。"
 	},
 
-  "templates":{
-    "index":{
-      "en": "Homepage",
-      "zh": "首页"
-    },
-    "cover":{
-      "en": "Cover",
-      "zh": "封面"
-    },
-    "post-index":{
-      "en": "Posts Index",
-      "zh": "文章首页"
-    },
-    "page":{
-      "en": "Static Page",
-      "zh": "静态页面"
-    },
-    "post":{
-      "en": "Post",
-      "zh": "文章页"
-    },
-    "portfolio":{
-      "en": "Portfolio",
-      "zh": "作品页"
-    },
-    "error-404": "404"
-  },
+  "templates": [
+    "page",
+    "post-index",
+    "post",
+    "portfolio",
+    "error-404",
+    "cover",
+    "index"
+  ],
 
-  "content_types":{
-    "post":{"title": "Posts"}
+  "content_types": {
+    "post": {"title": "Posts"}
   },
   "reserved_contents": {
     "post/index": true,
@@ -53,11 +32,11 @@
   "taxonomies": {
     "category": {"title": "Categories", "content_types": ["post"]}
   },
-  "allowed_slots":["comment"],
+  "allowed_slots": ["comment"],
 
-	"options":{
-    "palette":"default",
+	"options": {
+    "palette": "default",
     "palette-optional": "default, red, blue, yellow, orange, pink",
-		"sortby":"date"
+		"sortby": "date"
   }
 }

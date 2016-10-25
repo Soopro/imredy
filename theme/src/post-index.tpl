@@ -1,12 +1,12 @@
 {% import "g.tpl" %}
 {% include '_css_.tpl' %}
 
-<div class="body {{meta.background.class}}"
+<div class="body {{meta.bg.class}}"
      palette="{{g.opts.palette}}"
-     style="{{meta.background.style || site_meta.bg.style}}">
+     style="{{meta.bg.style || site_meta.bg.style}}">
   <div class="bg-widget">
     <div sup-widget-bg
-         ng-model="meta.background"></div>
+         ng-model="meta.bg"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -31,13 +31,12 @@
             <img class="img-responsive img-holder"
                  alt="{{post.title}}"
                  ng-if="post.featured_img.src"
-                 ng-src="{{g.img_holder_px}}"
-                 style="{{'background-image:
-                           url('+(post.featured_img.src|thumbnail)+')'}}" />
+                 ng-src="{{g.img_holder}}"
+                 style="{{post.featured_img.src|bg_img}}" />
             <img class="img-responsive"
                  alt="{{post.title}}"
                  ng-if="!post.featured_img.src"
-                 ng-src="{{g.default_img}}" />
+                 ng-src="{{g.cloud_img}}" />
           </a>
         </figure>
         <div class="col-lg-10 col-md-9 col-sm-8">

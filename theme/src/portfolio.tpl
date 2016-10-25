@@ -1,10 +1,10 @@
 {% import "g.tpl" %}
 {% include '_css_.tpl' %}
 
-<div class="body {{meta.background.class}}" palette="{{g.opts.palette}}"
-     style="{{meta.background.style || site_meta.bg.style}}">
+<div class="body {{meta.bg.class}}" palette="{{g.opts.palette}}"
+     style="{{meta.bg.style || site_meta.bg.style}}">
   <div class="bg-widget">
-    <div sup-widget-bg ng-model="meta.background"></div>
+    <div sup-widget-bg ng-model="meta.bg"></div>
   </div>
 
   {% include '_nav_.tpl' %}
@@ -17,22 +17,25 @@
         </h1>
       </header>
       <!-- entries -->
-      <div class="row" sup-widget-collection ng-model="meta.series">
-        <figure ng-repeat="works in meta.series"
+      <div class="row"
+           sup-widget-series
+           ng-model="meta.series">
+        <figure series-item
+                ng-repeat="works in meta.series"
                 class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="img-popup {{works.class}}">
+          <a href="#"
+             class="img-popup {{works.class}}">
             <img class="img-responsive img-holder"
                  alt="{{works.title}}"
-                 ng-src="{{g.img_holder_px}}"
-                 style="{{'background-image:
-                           url('+(works.src|thumbnail)+')'}}" />
+                 ng-src="{{g.img_holder}}"
+                 style="{{works.src|bg_img}}" />
           </a>
         </figure>
-        <figure ng-if="meta.series|is_empty"
-          class="col-lg-3 col-md-4 col-sm-6">
+        <figure class="col-lg-3 col-md-4 col-sm-6"
+                series-item-create>
           <a href="#" class="img-popup">
             <img class="img-responsive"
-                 ng-src="{{g.default_thumbnail}}"
+                 ng-src="{{g.default_img}}"
                  alt="..." />
           </a>
         </figure>
