@@ -35,8 +35,7 @@
                 series-item-create>
           <a href="#" class="img-popup">
             <img class="img-responsive"
-                 ng-src="{{g.default_img}}"
-                 alt="..." />
+                 ng-src="{{g.default_img}}"/>
           </a>
         </figure>
 
