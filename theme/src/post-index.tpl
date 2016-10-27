@@ -11,7 +11,9 @@
 
   {% include '_nav_.tpl' %}
   <section class="wrapper">
-    <div class="container entries">
+    <div class="container entries"
+         sup-query="post"
+         ng-model="query.posts">
       <header>
         <h1>
           <span sup-widget-text
@@ -19,8 +21,21 @@
                 ng-model="meta.title"></span>
         </h1>
       </header>
-      <span sup-query="post"
-            ng-model="query.posts"></span>
+      <div class="row entry"
+           sup-widget-create
+           file="post">
+        <figure class="col-lg-2 col-md-3 col-sm-4">
+          <a href="#">
+            <img class="img-responsive"
+                 ng-src="{{g.default_img}}" />
+          </a>
+        </figure>
+        <div class="col-lg-10 col-md-9 col-sm-8">
+          <h3>
+            <a href="#">{{_('Create new post')}}</a>
+          </h3>
+        </div>
+      </div>
       <!-- entry -->
       <div class="row entry"
            ng-repeat="post in query.posts.contents"
