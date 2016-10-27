@@ -23,7 +23,7 @@
       </header>
       <div class="row entry"
            sup-widget-create
-           file="post">
+           type="post">
         <figure class="col-lg-2 col-md-3 col-sm-4">
           <a href="#">
             <img class="img-responsive"
